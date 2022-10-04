@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var player: AVAudioPlayer!
+    var play: AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     
     func playSound(soundName: String) {
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player.play()
+        play = try! AVAudioPlayer(contentsOf: url!)
+        play.play()
                 
     }
 }
