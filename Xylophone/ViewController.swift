@@ -22,13 +22,13 @@ class ViewController: UIViewController {
             sender.alpha = 1.0
         }
         
-        playSound(soundName: sender.currentTitle!)
+        playTheSound(soundName: sender.currentTitle!)
     }
     
     func playTheSound(soundName: String) {
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
-        play = try! AVAudioPlayer(contentsOf: url!)
-        play.playing()
+        playing = try! AVAudioPlayer(contentsOf: url!)
+        playing.playing()
                 
     }
 }
